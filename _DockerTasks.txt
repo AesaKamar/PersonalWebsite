@@ -1,0 +1,3 @@
+docker build -t aesakamar/personal-website .
+docker run -p 3000:3000 -d aesakamar/personal-website
+docker exec -it <TAB> /bin/bash^C
