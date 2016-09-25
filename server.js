@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 /**
  * Load in Packages
  */

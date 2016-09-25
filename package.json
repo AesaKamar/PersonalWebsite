@@ -1,27 +1,39 @@
 {
-    "name": "personalwebsite",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "dependencies": {
-        "express": "^4.14.0"
-    },
-    "devDependencies": {
-        "gulp": "^3.9.1",
-        "nodemon": "^1.10.2"
-    },
-    "scripts": {
-        "test": "npm test",
-        "start": "nodemon server.js"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/AesaKamar/PersonalWebsite.git"
-    },
-    "author": "Aesa Kamar",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/AesaKamar/PersonalWebsite/issues"
-    },
-    "homepage": "https://github.com/AesaKamar/PersonalWebsite#readme"
+  "name": "personalwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-less": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-watch": "^4.3.9",
+    "nodemon": "^1.10.2"
+  },
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AesaKamar/PersonalWebsite.git"
+  },
+  "author": "Aesa Kamar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AesaKamar/PersonalWebsite/issues"
+  },
+  "homepage": "https://github.com/AesaKamar/PersonalWebsite#readme"
 }
