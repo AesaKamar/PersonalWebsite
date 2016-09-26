@@ -18,3 +18,8 @@ app.use(express.static('web'));
 app.listen(PORT, () => {
     console.log('Example app listening on port 3000!');
 });
+
+const index = __dirname + '/web/index/index.html';
+app.get('/', (req, res) => {
+    res.sendFile(index);
+});
