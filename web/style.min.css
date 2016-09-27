@@ -30,3 +30,8 @@
 .material-icons.md-light.md-inactive {
   color: rgba(255, 255, 255, 0.3);
 }
+.md-sidenav-left {
+  min-width: 50px !important;
+  width: 75px;
+  max-width: 75px !important;
+}

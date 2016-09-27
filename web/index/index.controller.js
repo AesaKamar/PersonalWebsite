@@ -15,6 +15,16 @@
 
         ];
 
+        vm.Tiles = [{
+                title: "Woah",
+                span: {
+                    row: 5,
+                    col: 5
+                }
+            },
+            {}
+        ]
+
     }]);
 
 
