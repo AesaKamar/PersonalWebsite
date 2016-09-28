@@ -1,0 +1,6 @@
+{
+    "port": {
+        "internal": 4999,
+        "external": 5000
+    }
+}

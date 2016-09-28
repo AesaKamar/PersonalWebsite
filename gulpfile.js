@@ -13,19 +13,20 @@ const
     angularFilesort = require('gulp-angular-filesort'),
     less = require('gulp-less'),
     path = require('path'),
-    nodemon = require('gulp-nodemon');
+    nodemon = require('gulp-nodemon'),
+    config = require('./server.config.json');
 
 
 // Static server
-gulp.task('serve', ['browser-sync'], () => {
+gulp.task('serve', ['browser-sync', 'inject'], () => {
     gulp.watch("./**").on('change', reload);
     gulp.watch('./**/*.less', ['less']);
 });
 
 gulp.task('browser-sync', ['nodemon'], () => {
     browserSync({
-        proxy: "localhost:3000", // local node app address
-        port: 5000, // use *different* port than above
+        proxy: "localhost:" + config.port.internal, // local node app address
+        port: config.port.external, // use *different* port than above
         notify: true
     });
 });
@@ -52,12 +53,12 @@ gulp.task('nodemon', (cb) => {
         });
 });
 
-gulp.task('index', () => {
-    var target = gulp.src('./web/index/index.html');
-    var sources = gulp.src(['./web/**/*.js', './web/*.css'], { read: false });
+gulp.task('inject', () => {
+    var target = gulp.src('./web/index/index.view.html');
+    var sources = gulp.src(['./web/**/*.js'], { read: false });
 
-    return target.pipe(inject(sources))
-        .pipe(angularFilesort())
+    return target
+        .pipe(inject(sources, { ignorePath: 'web' }))
         .pipe(gulp.dest('./web/index'));
 });
 

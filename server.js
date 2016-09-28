@@ -4,22 +4,18 @@
  */
 const express = require('express');
 const app = express();
-
-/**
- * Initialize global constants
- */
-const PORT = 3000;
+const config = require('./server.config.json');
 
 /**
  * Homepage
  */
 app.use(express.static('web'));
 
-app.listen(PORT, () => {
-    console.log('Example app listening on port 3000!');
+app.listen(config.port.internal, () => {
+    console.log('Listening on port ' + config.port.internal + '!');
 });
 
-const index = __dirname + '/web/index/index.html';
+const mainView = __dirname + '/web/index/index.view.html';
 app.get('/', (req, res) => {
-    res.sendFile(index);
+    res.sendFile(mainView);
 });
