@@ -1,3 +1,32 @@
+.avatar {
+  position: relative;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px;
+  vertical-align: middle;
+  zoom: 0.70;
+  transform: translateZ(0);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+}
+.avatar-large {
+  position: relative;
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0px;
+  vertical-align: text-top;
+  zoom: 0.70;
+  transform: translateZ(0);
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+}
+
 .material-icons.md-18 {
   font-size: 18px;
   height: 18px;
@@ -32,6 +61,10 @@
 }
 .md-sidenav-left {
   min-width: 50px !important;
-  width: 75px;
-  max-width: 75px !important;
+  width: 80px;
+  max-width: 80px !important;
+  overflow: hidden;
+}
+.sidenav-content {
+  overflow: hidden;
 }

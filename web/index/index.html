@@ -37,6 +37,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.5/d3.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript "></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.3.1/js/md5.min.js"></script>
     <!--  End JS Includes   -->
 
 
@@ -58,19 +59,31 @@
             <md-toolbar>
                 <h1 class="md-toolbar-tools"></h1>
             </md-toolbar>
-            <md-content layout-padding layout="column" layout-align="center center" ng-repeat="button in vm.LeftNavButtons">
+            <md-content class="sidenav-content" layout-padding layout="column" layout-align="center center" ng-repeat="button in vm.LeftNavButtons" md-disable-scroll-target="">
                 <md-button class="md-primary" layout-align="center center">
                     <md-icon md-font-set="material-icons" class="md-48">{{button.icon}}</md-icon>
                 </md-button>
             </md-content>
 
         </md-sidenav>
-        <md-content flex layout-padding>
-            <md-grid-list md-cols="1" md-cols-sm="2" md-cols-md="1" md-cols-gt-md="1" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
-                <md-grid-tile ng-repeat="tile in vm.Tiles" md-rowspan="{{tile.span.row}}" md-colspan="{{tile.span.col}}" md-colspan-sm="1" md-colspan-xs="1" ng-class="tile.background">
-                    <md-icon md-svg-icon="{{tile.icon}}"></md-icon>
-                </md-grid-tile>
-            </md-grid-list>
+        <md-content flex layout-padding ng-cloak>
+            <md-card>
+                <md-card-title>
+                    <img ng-src="https://www.gravatar.com/avatar/4327ede90ccad118a71ced1b343e53df?s=1024" class="md-avatar avatar-large" alt="A Toucan" md-whiteframe="5" />
+                    <md-card-title-text>
+                        <span class="md-headline">Aesa Kamar</span>
+                        <span class="md-subhead">Software developer</span>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                        <div class="md-media-lg card-media"></div>
+                    </md-card-title-media>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <md-button>Action 1</md-button>
+                    <md-button>Action 2</md-button>
+                </md-card-actions>
+            </md-card>
+
         </md-content>
     </div>
 </body>
