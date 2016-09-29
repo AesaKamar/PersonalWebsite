@@ -1,12 +1,18 @@
 /*jshint esversion: 6 */
 ((app) => {
 
-    app.config(['$stateProvider',($stateProvider) => {
-        $stateProvider.state({
-            name: 'about',
-            url: '/about',
-            template: '<h3>Its the UI-Router hello world app!</h3>'
-        });
+    app.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
+
+        //Default State
+        $urlRouterProvider.otherwise("/");
+
+        $stateProvider
+            .state('index', {
+                url: '/',
+                views: {
+                    'contact': { templateUrl: '../index/contact/contact.view.html' }
+                }
+            });
     }]);
 
 
